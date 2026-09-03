@@ -31,6 +31,12 @@ function aplicarConfiguracionVisual() {
   const imgEscudo = document.getElementById('app-escudo-img');
   if (imgEscudo) {
     imgEscudo.src = cfg.escudoUrl;
+     // 👇 AGREGA ESTAS LÍNEAS PARA MEJORAR LA IMAGEN 👇
+    imgEscudo.style.width = '60px';          // Ajusta el ancho al tamaño real de tu menú
+    imgEscudo.style.height = '60px';         // Fuerza a que sea un cuadrado perfecto
+    imgEscudo.style.objectFit = 'contain';   // Evita que la imagen se estire o se deforme
+    imgEscudo.style.borderRadius = '50%';    // Si tu logo es circular (como el de Viva Italia), lo hace un círculo perfecto
+    
     imgEscudo.onerror = function() {
       this.style.display = 'none';
       this.parentElement.innerHTML = cfg.emojiDefecto || ' ';

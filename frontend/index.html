@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Gestión Integral - Villa Ansaldi</title>
-    <link rel="icon" type="image/png" href="ClubVA.png">
+    <link rel="icon" type="image/png" href="escudoUrl">
     <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -97,7 +97,7 @@
 </span>
 
             </div>
-            <p id="subtitulo-pantalla" class="text-gray-500 mt-1.5 text-sm md:text-base font-medium">Estado de socios y recaudación en tiempo real.</p>
+            <p id="subtitulo-pantalla" class="text-gray-500 mt-1.5 text-sm md:text-base font-medium">Estado de Alumnos y recaudación en tiempo real.</p>
         </header>
 
         <!-- FECHA Y HORA DE MARCA BLANCA (Se alinea solo a la derecha en pantallas grandes) -->
@@ -177,7 +177,7 @@
     <div class="bg-white rounded-xl shadow border border-gray-200 overflow-hidden">
         <div class="p-5 border-b border-gray-200 bg-gray-50 flex items-center justify-between gap-4">
             <div class="relative w-full max-w-md">
-                <input type="text" id="input-buscador" placeholder="Buscar socio por Nombre o DNI..." class="w-full pl-4 pr-4 py-2 border border-gray-300 rounded-lg bg-white">
+                <input type="text" id="input-buscador" placeholder="Buscar Alumno por Nombre o DNI..." class="w-full pl-4 pr-4 py-2 border border-gray-300 rounded-lg bg-white">
             </div>
        
         </div>
@@ -185,7 +185,7 @@
             <table class="w-full text-left border-collapse">
                 <thead>
                     <tr class="bg-gray-100 text-xs font-semibold uppercase text-gray-600 border-b border-gray-200">
-                        <th id="th-dashboard-entidad" class="p-4 text-left">Socio / Nombre</th>                        
+                        <th id="th-dashboard-entidad" class="p-4 text-left">Alumno / Nombre</th>                        
                         <th class="p-4">Tipo Plan</th>
                         <th class="p-4 text-center">Estado Semáforo</th>
                         <th class="p-4 text-right">Acciones</th>
@@ -200,7 +200,7 @@
 </section> <!-- 🔒 CIERRE SEGURO Y ÚNICO DE LA PANTALLA 1 (DASHBOARD) -->
 
 <!-- ======================================================= -->
-<!-- 👥 PANTALLA 2: SOCIOS (Padrón Oficial Administrativo)     -->
+<!-- 👥 PANTALLA 2: Alumnos (Padrón Oficial Administrativo)     -->
 <!-- ======================================================= -->
 <section id="vista-socios" class="hidden bg-white rounded-xl shadow border border-gray-200 overflow-hidden">
 <div class="p-5 border-b border-gray-200 bg-gray-50 flex items-center justify-between gap-4 flex-wrap">
@@ -224,7 +224,7 @@
             class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl shadow-md transition flex items-center gap-2 cursor-pointer"
         >
             <span id="btn-txt-nuevo">
-                + Nuevo Socio
+                + Nuevo Alumno
             </span>
         </button>
     </div>
@@ -338,7 +338,7 @@
         <tr>
           <th class="p-4 text-left">Fecha</th>
           <th class="p-4 text-left">Recibo</th>
-          <th class="p-4 text-left">Socio</th>
+          <th class="p-4 text-left">Alumno</th>
           <th class="p-4 text-left">Período</th>
           <th class="p-4 text-left">Medio</th>
           <th class="p-4 text-right">Monto</th>
@@ -360,7 +360,7 @@
         <!-- EXPORTAR REPORTES -->
         <div class="bg-white rounded-xl shadow border border-gray-200 p-6">
             <h4 class="text-lg font-bold text-gray-900 mb-2">Exportar Reportes Oficiales</h4>
-            <p class="text-sm text-gray-500 mb-6">Descarga el listado consolidado de socios con sus estados de cuenta para auditorías o balances.</p>
+            <p class="text-sm text-gray-500 mb-6">Descarga el listado consolidado de Alumnos con sus estados de cuenta para auditorías o balances.</p>
             <div class="flex flex-wrap gap-4">
                 <button onclick="exportarExcelContable()" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 px-5 rounded-xl shadow transition text-sm cursor-pointer shadow-emerald-100">Descargar Reporte Excel (.csv)</button>
                 <button onclick="exportarPDFContable()" class="flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-semibold py-2.5 px-5 rounded-xl shadow transition text-sm cursor-pointer shadow-rose-100">Imprimir Balance PDF</button>
@@ -485,12 +485,12 @@
         </main>
     </div>
     <!-- ======================================================= -->
-    <!--       ➕   MODAL 1: NUEVO SOCIO / MIEMBRO              -->
+    <!--       ➕   MODAL 1: NUEVO Alumnos / MIEMBRO              -->
     <!-- ======================================================= -->
     <div id="modal-socio" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
         <div class="bg-white rounded-2xl max-w-2xl w-full shadow-2xl overflow-hidden border border-gray-100 transform transition-all flex flex-col my-auto">
             <div class="bg-white text-gray-900 px-6 py-4 flex justify-between items-center border-b border-gray-100">
-                <h3 id="txt-modal-titulo-alta" class="text-lg font-bold text-gray-900">Nuevo Socio</h3>
+                <h3 id="txt-modal-titulo-alta" class="text-lg font-bold text-gray-900">Nuevo Alumno</h3>
                 <button onclick="cerrarModalSocio()" class="text-gray-400 hover:text-gray-600 text-2xl cursor-pointer font-light">&times;</button>
             </div>
             <form id="form-nuevo-socio" class="p-6 space-y-5 text-left overflow-y-auto max-h-[80vh]">
@@ -560,7 +560,7 @@
         </select>
     </div>
     <div id="contenedor-titular-alta" class="hidden animate-fade-in space-y-1">
-        <label class="block text-xs font-bold text-blue-600 mb-1">👤 Vincular a Socio Titular *</label>
+        <label class="block text-xs font-bold text-blue-600 mb-1">👤 Vincular a Alumnos Titular *</label>
         <select id="form-id-titular" class="w-full px-3 py-2 border border-blue-300 rounded-lg text-sm bg-white outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
             <!-- Se carga solo -->
         </select>
@@ -696,7 +696,7 @@
         </div>
     </div>
     <!-- ======================================================= -->
-    <!-- 🎉 MODAL 3: ÉXITO AL REGISTRAR SOCIO / MIEMBRO          -->
+    <!-- 🎉 MODAL 3: ÉXITO AL REGISTRAR Alumnos / MIEMBRO          -->
     <!-- ======================================================= -->
     <div id="modal-exito-socio" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
         <div class="bg-white rounded-2xl max-w-sm w-full shadow-2xl overflow-hidden border border-gray-100 transform transition-all text-center p-6">
@@ -712,7 +712,7 @@
         </div>
     </div>
 <!-- ======================================================= -->
-<!-- 📇 MODAL 5: FICHA HISTÓRICA DETALLADA DEL SOCIO (MVP MARCA BLANCA) -->
+<!-- 📇 MODAL 5: FICHA HISTÓRICA DETALLADA DEL Alumno (MVP MARCA BLANCA) -->
 <!-- ======================================================= -->
 <div id="modal-ficha-historica" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-fade-in">
     <div class="bg-white rounded-2xl max-w-4xl w-full shadow-2xl overflow-hidden border border-gray-100 transform transition-all flex flex-col my-auto max-h-[90vh]">

@@ -4,14 +4,14 @@
 
 // frontend/config.js
 const CONFIG_INSTITUCION = {
-  nombre: "Villa Ansaldi",
+  nombre: "Viva Italia",
 
-  subtitulo: "Club Atlético",
-  escudoUrl: "ClubV_A.jpeg", // escudoUrl: "ClubVA.png",
+  subtitulo: "Instituto de Lengua Italiana",
+  escudoUrl: "VivaItalia.jpeg", // escudoUrl: "ClubVA.png",
 
 
-  emojiDefecto: "⚽",
-  version: "v1.0.0 - SaaS Online", // <- Agregamos la versión aquí
+  emojiDefecto: "&#x1F1EE;&#x1F1F9;",
+  version: "v1.0.0 - SaaS Online", 
 
   //Porcentaje de recargo por mora (5% por defecto)
   recargoMoraPorcentaje: 5,
@@ -21,12 +21,12 @@ const CONFIG_INSTITUCION = {
   },
 
 terminos: {
-    singular: "Socio", 
-    plural: "Socios", 
-    nuevoEntidad: "Nuevo Socio",
-    padronEntidad: "Padrón de Socios",
-    gestionEntidad: "Gestión de Socios",
-    cuotaConcepto: "Cuota Social",
+    singular: "Alumno", 
+    plural: "Alumnos", 
+    nuevoEntidad: "Nuevo Alumno",
+    padronEntidad: "Padrón de Alumnos",
+    gestionEntidad: "Gestión de Alumnos",
+    cuotaConcepto: "Cuota Mensual",
     rolPrincipal: "Titular" 
   },
 
@@ -34,7 +34,7 @@ terminos: {
   // Al mover esto aquí, eliminamos por completo el hardcodeo del componente visual.
   modulos: [
     { id: 'dashboard', texto: 'Dashboard', icono: 'fas fa-chart-pie', color: 'text-blue-400', activo: true },
-    { id: 'socios', texto: 'Socios', icono: 'fas fa-users', color: 'text-emerald-400', activo: true, usaTerminoPlural: true },
+    { id: 'alumnos', texto: 'Alumnos', icono: 'fas fa-users', color: 'text-emerald-400', activo: true, usaTerminoPlural: true },
     { id: 'cuotas', texto: 'Cuotas', icono: 'fas fa-receipt', color: 'text-amber-400', activo: true },
     { id: 'caja', texto: 'Caja y Contabilidad', icono: 'fas fa-cash-register', color: 'text-cyan-400', activo: true },
     { id: 'calendario', texto: 'Calendario', icono: 'fas fa-calendar-alt', color: 'text-indigo-400', activo: true },
@@ -42,7 +42,7 @@ terminos: {
     { id: 'perfiles', texto: 'Perfiles y Permisos', icono: 'fas fa-user-shield', color: 'text-purple-400', activo: false }
   ],
 
-  planesDisponibles: ["Individual", "Titular", "Adherente", "Fútbol Infantil", "Gimnasio"],
+  planesDisponibles: ["Individual", "Grupal"],
   montoBaseDefault: 5000.00,
 };
 
