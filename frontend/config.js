@@ -34,7 +34,7 @@ terminos: {
   // Al mover esto aquí, eliminamos por completo el hardcodeo del componente visual.
   modulos: [
     { id: 'dashboard', texto: 'Dashboard', icono: 'fas fa-chart-pie', color: 'text-blue-400', activo: true },
-    { id: 'alumnos', texto: 'Alumnos', icono: 'fas fa-users', color: 'text-emerald-400', activo: true, usaTerminoPlural: true },
+{ id: 'socios', texto: 'Alumnos', icono: 'fas fa-users', color: 'text-emerald-400', activo: true, usaTerminoPlural: true },
     { id: 'cuotas', texto: 'Cuotas', icono: 'fas fa-receipt', color: 'text-amber-400', activo: true },
     { id: 'caja', texto: 'Caja y Contabilidad', icono: 'fas fa-cash-register', color: 'text-cyan-400', activo: true },
     { id: 'calendario', texto: 'Calendario', icono: 'fas fa-calendar-alt', color: 'text-indigo-400', activo: true },
