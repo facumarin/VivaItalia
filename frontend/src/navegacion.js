@@ -4,7 +4,7 @@ export function configurarNavegacion() {
   // 1. Mapeamos de forma real, independiente y semántica las secciones del index.html
   const vistas = {
     'dashboard': { id: 'vista-dashboard', titulo: 'Panel de Control', sub: 'Estado de socios y recaudación en tiempo real.' },
-    'socios': { id: 'vista-socios', titulo: 'Gestión de Socios', sub: 'Padrón de miembros activos, de altas y bajas.' },
+    'socios': { id: 'vista-socios', titulo: 'Gestión de Alumnos', sub: 'Padrón de miembros activos, de altas y bajas.' },
     'cuotas': { id: 'vista-cuotas', titulo: 'Balances de Cuotas', sub: 'Proyección y auditoría de aranceles sociales de miembros.' },
     'caja': { id: 'seccion-caja', titulo: 'Caja y Contabilidad', sub: 'Control centralizado de flujos de efectivo, cuentas bancarias y egresos.' }, // 🎯 LA SECCIÓN OPERATIVA QUE ANALIZAMOS HOY
     'calendario': { id: 'vista-calendario', titulo: 'Control de Horarios', sub: 'Administración de turnos para canchas y reserva del salón.' } // 🗓️ RESERVADO PARA EL PRÓXIMO MÓDULO DE REGLAS

@@ -6,7 +6,7 @@
 const CONFIG_INSTITUCION = {
   nombre: "Viva Italia",
 
-  subtitulo: "Instituto de Lengua Italiana",
+  subtitulo: "Clases de Italiano",
   escudoUrl: "VivaItalia.jpeg", // escudoUrl: "ClubVA.png",
 
 
