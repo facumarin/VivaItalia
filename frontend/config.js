@@ -2,13 +2,22 @@
 // ⚙️ CONFIGURACIÓN DINÁMICA DE LA INSTITUCIÓN (MARCA BLANCA)
 // ==============================================================
 
-// frontend/config.js
 const CONFIG_INSTITUCION = {
   nombre: "Viva Italia",
-
   subtitulo: "Clases de Italiano",
-  escudoUrl: "VivaItalia.jpeg", // escudoUrl: "ClubVA.png",
+  escudoUrl: "VivaItalia.jpeg",
 
+  // 🎨 NUEVO: Colores de la marca (Ejemplo: Bandera de Italia)
+  colores: {
+    principal: "#009246",   // Verde Italia
+    centro: "#FFFFFF",      // Blanco
+    secundario: "#CE2B37",  // Rojo Italia
+    textoMenu: "#1E293B",       // Para las opciones de menú 
+    textoSubtitulo: "#FFFFFF",  // Color exclusivo para el subtítulo 
+    
+    iconosConColorOriginal: true // true = mantiene azul/verde/ámbar. 
+
+  },
 
   emojiDefecto: "&#x1F1EE;&#x1F1F9;",
   version: "v1.0.0 - SaaS Online", 
@@ -43,7 +52,7 @@ terminos: {
   ],
 
   planesDisponibles: ["Individual", "Grupal"],
-  montoBaseDefault: 5000.00,
+  montoBaseDefault: 50000.00,
 };
 
 window.AppConfig = CONFIG_INSTITUCION;

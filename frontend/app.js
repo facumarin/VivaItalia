@@ -777,12 +777,12 @@ inicializarCalendario();
 
   document.getElementById('input-buscador')?.addEventListener('input', (e) => {
     const txt = e.target.value.toLowerCase().trim();
-    renderizarTabla(todosLosSocios.filter(s => s.estado !== 'Inactivo' && (s.nombre.toLowerCase().includes(txt) || s.dni.toString().includes(txt))));
+    renderizarTabla(todosLosSocios.filter(s => s.estado !== 'Inactivo' && (s.nombre.toLowerCase().includes(txt) || (s.apellido && s.apellido.toLowerCase().includes(txt)) ||  s.dni.toString().includes(txt))));
   });
 
   document.getElementById('input-buscador-padron')?.addEventListener('input', (e) => {
     const txt = e.target.value.toLowerCase().trim();
-    renderizarPadronSocios(todosLosSocios.filter(s => s.nombre.toLowerCase().includes(txt) || s.dni.toString().includes(txt)));
+    renderizarPadronSocios(todosLosSocios.filter(s => s.nombre.toLowerCase().includes(txt) || (s.apellido && s.apellido.toLowerCase().includes(txt)) || s.dni.toString().includes(txt)));
   });
 
   document.getElementById('form-editar-socio')?.addEventListener('submit', async (e) => {
@@ -791,6 +791,7 @@ inicializarCalendario();
     const datos = {
       nombre: document.getElementById('edit-form-nombre').value.trim(),
       apellido: document.getElementById('edit-form-apellido').value.trim(),
+      dni: document.getElementById('edit-form-dni').value.trim(),
       telefono: document.getElementById('edit-form-telefono').value.trim(),
       email: document.getElementById('edit-form-email').value.trim(),
       direccion: document.getElementById('edit-form-direccion').value.trim(),
